@@ -1,0 +1,307 @@
+body{
+    overflow-x: hidden;
+    font-family: 'Quicksand',sans-serif;
+}
+
+:root{
+    --title-shadow: 2px 2px 7px rgb(0,0,0, .5);
+    --color-pr: #4b8f91;
+}
+
+.container{
+    max-width: 1150px;
+}
+
+.active{
+    color: var(--color-pr) !important;
+}
+
+.content{
+    width: 100%;
+    overflow: hidden;
+}
+
+#presentacion-section{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(29, 27, 52);
+    color: white
+}
+
+
+.name{
+    font-size: 2.4em;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.name span{
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+.acento{
+    color: var(--color-pr);
+}
+
+.iconos-redes a{
+    display: inline-flex;
+    color: var(--color-pr);
+    font-size: 30px;
+    padding: 0 5px;
+    transition: .3s ease;
+}
+
+.iconos-redes a:hover{
+    scale: 1.07;
+}
+
+.btn-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    font-weight: 600;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 22px;
+    background-color: var(--color-pr);
+    border: 2px solid #316567;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-main:hover{
+    scale: 1.05;
+}
+
+.perfil-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 0 20px var(--color-pr));
+    overflow: hidden;
+}
+
+.perfil-img::before{
+    content: '';
+    width: 97%;
+    inset: 0;
+    margin: auto;
+    aspect-ratio: 1;
+    background-image: url('/img/TakeMyHand.jpg');
+    background-position: center center;
+    background-size: cover;
+    clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+    z-index: 6;
+    position: absolute;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.55) inset;
+}
+
+.perfil-img::after{
+    content: '';
+    width: 100%;
+    inset: 0;
+    aspect-ratio: 1;
+    background: var(--color-pr);
+    clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+    z-index: 5;
+    position: absolute;
+}
+
+#aboutme-section{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(36, 34, 57);
+    color: white
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(29, 27, 52);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#services h2{
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+#services h3{
+    font-size: 29px;
+    font-weight: 800;
+    text-shadow: 1px 1px 5px var(--title-shadow);
+}
+
+#services p{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+#services svg{
+    width: 65px;
+    height: 65px;
+    color: var(--color-pr);
+}
+
+.card-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(245,245,245,.1);
+    backdrop-filter: blur(20px);
+    padding: 30px 10px;
+    border-radius: 22px;
+    border: 2px solid rgb(245,245,245,.6);
+    justify-content: center;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.55);
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(36, 34, 57);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#projects h2{
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+#projects .img-content{
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+    position: relative;
+    border: 2px solid rgb(245,245,245,.1);
+    cursor: pointer;
+}
+
+.img-content::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    z-index: 1;
+    background-image: linear-gradient(132deg, transparent 80%, rgb(245,245,245,.2) 90%, transparent);
+    pointer-events: none;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(29, 27, 52);
+    color: white;
+}
+
+#contact h2{
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-content{
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.form-content .input-field{
+    width: 100%;
+    height: 45px;
+}
+
+.input-field input{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid rgb(245,245,245,.4);
+    background: rgb(245,245,245,.1);
+    backdrop-filter: blur(20px);
+    color: white;
+    border-radius: 5px;
+}
+
+.input-message{
+    width: 100%;
+    height: 180px;
+}
+
+
+.input-message textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid rgb(245,245,245,.4);
+    background: rgb(245,245,245,.1);
+    backdrop-filter: blur(20px);
+    color: white;
+    border-radius: 5px;
+    resize: none;
+}
+
+footer{
+    background: rgb(36, 34, 57);
+    color: white;
+}
+
+footer svg{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+footer svg:hover{
+    scale: 1.08;
+}
+
+.atajoBtn{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.atajoBtn.active{
+    opacity: 1;
+}
+
+.atajoBtn a{
+    color: var(--color-pr);
+}
+
+.atajoBtn svg{
+    width: 60px;
+    height: 60px;
+}
